@@ -1,102 +1,104 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HomeGallery - Elegant Home Collection</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #ffffff 0%, #f7efe5 100%);
-      animation: bgmove 30s ease infinite;
-      color: #333;
-      min-height: 100vh;
-    }
-    @keyframes bgmove {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-    header {
-      text-align: center;
-      padding: 4rem 2rem;
-      background-color: rgba(255, 255, 255, 0.8);
-    }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      color: #bfa76f;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      color: #777;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-    .product {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-      border-radius: 8px;
-    }
-    .add-to-cart {
-      display: block;
-      margin-top: 1rem;
-      padding: 0.75rem;
-      background-color: #bfa76f;
-      color: #fff;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #fffaf0;
-      color: #444;
-      font-size: 0.9rem;
+    body { margin:0; font-family:'Outfit',sans-serif; background: #fff; color:#333; overflow-x:hidden; }
+    header { background:#fdf6e3; text-align:center; padding:4rem 2rem; }
+    header h1 { margin:0; font-size:3rem; color:#b79a59; }
+    header p { margin-top:1rem; font-size:1.2rem; color:#555; }
+
+    .slider { position:relative; max-width:900px; margin:3rem auto; overflow:hidden; }
+    .slides { display:flex; transition:transform .5s ease; }
+    .slide { min-width:100%; box-sizing:border-box; position:relative; }
+    .slide blockquote { margin:0; width:100%; height:600px; }
+
+    .products-nav { text-align:center; margin-top:1rem; }
+    .dot { display:inline-block; width:12px; height:12px; margin:0 5px; background:#ccc; border-radius:50%; cursor:pointer; }
+    .dot.active { background:#b79a59; }
+
+    .testimonials { max-width:800px; margin:4rem auto; padding:2rem; }
+    .testimonial { background:#fdf6e3; padding:1.5rem; border-left:4px solid #b79a59; margin-bottom:1.5rem; opacity:0; transform:translateY(20px); transition:.6s; }
+
+    footer { background:#f6f0e4; padding:2rem; text-align:center; font-size:.9rem; }
+    footer a { color:#b79a59; text-decoration:none; font-weight:500; }
+
+    .whatsapp-btn {
+      position:fixed; bottom:20px; right:20px;
+      background:#25D366; color:#fff; padding:15px;
+      border-radius:50%; text-decoration:none; font-size:1.5rem;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>HomeGallery</h1>
-    <p>Elegant Homeware Collection — curated for beauty and comfort</p>
-  </header>  <section class="products">
-    <div class="product">
-      <iframe src="https://www.instagram.com/p/DMMvRR_P6vR/embed" allowtransparency="true"></iframe>
-      <a class="add-to-cart" href="https://wa.me/6287869496679?text=Hi!%20I%20want%20to%20order%20this%20product:%20https://www.instagram.com/p/DMMvRR_P6vR" target="_blank">Order via WhatsApp</a>
+    <h1>Home Gallery</h1>
+    <p>Lulu Set Collection – Elegance meets comfort in every piece</p>
+  </header>
+
+  <div class="slider">
+    <div class="slides">
+      <div class="slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DMMq3cpP03k/" data-instgrm-version="14"></blockquote></div>
+      <div class="slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DMMsRNEPE3I/" data-instgrm-version="14"></blockquote></div>
+      <div class="slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DMMtRQfvZO_/" data-instgrm-version="14"></blockquote></div>
+      <div class="slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DMMtyh_vmkQ/" data-instgrm-version="14"></blockquote></div>
+      <div class="slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DMMuMexPpuZ/" data-instgrm-version="14"></blockquote></div>
     </div>
-    <div class="product">
-      <iframe src="https://www.instagram.com/p/DMMzTyjPPz6/embed" allowtransparency="true"></iframe>
-      <a class="add-to-cart" href="https://wa.me/6287869496679?text=Hi!%20I%20want%20to%20order%20this%20product:%20https://www.instagram.com/p/DMMzTyjPPz6" target="_blank">Order via WhatsApp</a>
-    </div>
-    <div class="product">
-      <iframe src="https://www.instagram.com/p/DMMtyh_vmkQ/embed" allowtransparency="true"></iframe>
-      <a class="add-to-cart" href="https://wa.me/6287869496679?text=Hi!%20I%20want%20to%20order%20this%20product:%20https://www.instagram.com/p/DMMtyh_vmkQ" target="_blank">Order via WhatsApp</a>
-    </div>
-  </section>  <footer>
-    Instagram: <a href="https://instagram.com/homegallery.id" target="_blank">@homegallery.id</a><br>
-    WhatsApp: <a href="https://wa.me/6287869496679" target="_blank">+62 878-6949-6679</a>
+  </div>
+  <div class="products-nav"></div>
+
+  <section class="testimonials">
+    <div class="testimonial">“Such beautiful pieces! The Lulu set elevated my living space instantly.” — Mia J.</div>
+    <div class="testimonial">“Love the texture and feel in person. Delivery was super fast!” — Arif S.</div>
+    <div class="testimonial">“Stylish, premium look without the premium price. Highly recommend!” — Dina W.</div>
+  </section>
+
+  <footer>
+    Contact us via <a href="https://wa.me/6287869496679">WhatsApp</a> | Follow <a href="https://instagram.com/homegallery.id">@homegallery.id</a>
   </footer>
+
+  <a href="https://wa.me/6287869496679?text=Halo,%20Saya%20ingin%20pesan%20Lulu%20Set" class="whatsapp-btn">💬</a>
+
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script>
+    const slides = document.querySelector('.slides');
+    const slideCount = document.querySelectorAll('.slide').length;
+    const nav = document.querySelector('.products-nav');
+    let index = 0;
+
+    function goToSlide(i){
+      slides.style.transform = 'translateX(' + (-i * 100) + '%)';
+      nav.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+      nav.querySelectorAll('.dot')[i].classList.add('active');
+    }
+
+    // generate dots
+    for(let i=0;i<slideCount;i++){
+      const dot = document.createElement('span');
+      dot.className='dot';
+      dot.addEventListener('click', () => { index=i; goToSlide(i); });
+      nav.append(dot);
+    }
+    nav.firstChild.classList.add('active');
+
+    // autoplay
+    setInterval(() => { index = (index+1)%slideCount; goToSlide(index); }, 5000);
+
+    // fade-in animations on scroll
+    const tms = document.querySelectorAll('.testimonial');
+    function checkScroll(){
+      tms.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 50){
+          el.style.opacity='1'; el.style.transform='translateY(0)';
+        }
+      });
+    }
+    window.addEventListener('scroll', checkScroll);
+    checkScroll();
+  </script>
 </body>
 </html>
