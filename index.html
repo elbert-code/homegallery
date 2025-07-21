@@ -1,79 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Home Gallery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HomeGallery - Elegant Home Collection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <style>
-    body { margin:0; font-family:'Inter',sans-serif; background:#fffaf3; color:#222; overflow-x:hidden; }
-    header { text-align:center; padding:2rem 1rem; border-bottom:2px solid #e5c77f; background:#fff; }
-    header img { height:90px; border-radius:50%; }
-    h1 { font-family:'Playfair Display', serif; font-size:2.5rem; color:#c9a14a; margin:1rem 0; }
-    .animation-bg { position:fixed; top:0; left:0; width:100%; height:100%; background:radial-gradient(circle, #fffaf3, #fff); z-index:-1;
-      animation: movebg 10s infinite alternate;}
-    @keyframes movebg { from { transform:scale(1) translate(0,0); } to { transform:scale(1.1) translate(-50px,-30px); } }
-    .products { display:flex; justify-content:center; gap:2rem; flex-wrap:wrap; padding:2rem; }
-    .product { background:#fff; border:1px solid #e0c38c; border-radius:12px; padding:1rem; width:260px; box-shadow:0 4px 6px rgba(0,0,0,0.1); text-align:center; }
-    .product h3 { margin:0.5rem 0 0.2rem; font-size:1.1rem; }
-    .product p { color:#777; margin:0.2rem 0 0.6rem; }
-    .product button { background:#c9a14a; color:#fff; border:none; padding:.5rem 1rem; border-radius:6px; cursor:pointer; font-weight:600; }
-    .cart { max-width:500px; margin:2rem auto; text-align:center; }
-    textarea { width:100%; padding:1rem; border-radius:10px; border:1px solid #ccc; margin-top:1rem; resize:none; }
-    footer { text-align:center; padding:2rem 1rem; border-top:2px solid #e5c77f; background:#fff; }
-    footer a { color:#c9a14a; text-decoration:none; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7efe5 100%);
+      animation: bgmove 30s ease infinite;
+      color: #333;
+      min-height: 100vh;
+    }
+    @keyframes bgmove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    header {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #bfa76f;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #777;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .product {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 8px;
+    }
+    .add-to-cart {
+      display: block;
+      margin-top: 1rem;
+      padding: 0.75rem;
+      background-color: #bfa76f;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #fffaf0;
+      color: #444;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
-  <div class="animation-bg"></div>
   <header>
-    <img src="https://www.instagram.com/homegallery.id/profile_pic" alt="Logo Home Gallery" onerror="this.src='placeholder.png'">
-    <h1>Home Gallery</h1>
-  </header>
-
-  <div class="products">
-    <!-- Ganti POST_URL_x dengan URL posting IG kamu -->
-    <div class="product" data-post="https://www.instagram.com/p/POST_URL_1/">
-      <div class="instagram-embed"></div>
-      <button onclick="addToCart('Product 1')">Add to Cart</button>
+    <h1>HomeGallery</h1>
+    <p>Elegant Homeware Collection — curated for beauty and comfort</p>
+  </header>  <section class="products">
+    <div class="product">
+      <iframe src="https://www.instagram.com/p/DMMvRR_P6vR/embed" allowtransparency="true"></iframe>
+      <a class="add-to-cart" href="https://wa.me/6287869496679?text=Hi!%20I%20want%20to%20order%20this%20product:%20https://www.instagram.com/p/DMMvRR_P6vR" target="_blank">Order via WhatsApp</a>
     </div>
-    <div class="product" data-post="https://www.instagram.com/p/POST_URL_2/">
-      <div class="instagram-embed"></div>
-      <button onclick="addToCart('Product 2')">Add to Cart</button>
+    <div class="product">
+      <iframe src="https://www.instagram.com/p/DMMzTyjPPz6/embed" allowtransparency="true"></iframe>
+      <a class="add-to-cart" href="https://wa.me/6287869496679?text=Hi!%20I%20want%20to%20order%20this%20product:%20https://www.instagram.com/p/DMMzTyjPPz6" target="_blank">Order via WhatsApp</a>
     </div>
-    <div class="product" data-post="https://www.instagram.com/p/POST_URL_3/">
-      <div class="instagram-embed"></div>
-      <button onclick="addToCart('Product 3')">Add to Cart</button>
+    <div class="product">
+      <iframe src="https://www.instagram.com/p/DMMtyh_vmkQ/embed" allowtransparency="true"></iframe>
+      <a class="add-to-cart" href="https://wa.me/6287869496679?text=Hi!%20I%20want%20to%20order%20this%20product:%20https://www.instagram.com/p/DMMtyh_vmkQ" target="_blank">Order via WhatsApp</a>
     </div>
-  </div>
-
-  <section class="cart">
-    <h2>🛒 Your Cart</h2>
-    <textarea id="cartBox" readonly placeholder="Your cart is empty..."></textarea>
-    <br><a id="checkoutBtn" target="_blank"><button>Checkout via WA</button></a>
-  </section>
-
-  <footer>
-    <p>Instagram: <a href="https://instagram.com/homegallery.id" target="_blank">@homegallery.id</a></p>
-    <p>WhatsApp: +62 878‑6949‑6679</p>
+  </section>  <footer>
+    Instagram: <a href="https://instagram.com/homegallery.id" target="_blank">@homegallery.id</a><br>
+    WhatsApp: <a href="https://wa.me/6287869496679" target="_blank">+62 878-6949-6679</a>
   </footer>
-
-  <script async src="//www.instagram.com/embed.js"></script>
-  <script>
-    document.querySelectorAll('.product').forEach(div => {
-      const url = div.dataset.post;
-      div.querySelector('.instagram-embed').innerHTML = <blockquote class="instagram-media" data-instgrm-permalink="${url}" data-instgrm-version="14"></blockquote>;
-    });
-    instgrm.Embeds.process();
-
-    let cart = [];
-    const cartBox = document.getElementById('cartBox');
-    const checkoutBtn = document.getElementById('checkoutBtn');
-    function addToCart(name) {
-      cart.push(name);
-      cartBox.value = cart.join('\n');
-      const msg = encodeURIComponent(Hi, saya mau beli:\n${cart.join('\n')});
-      checkoutBtn.href = https://wa.me/6287869496679?text=${msg};
-    }
-  </script>
 </body>
 </html>
