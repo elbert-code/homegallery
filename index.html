@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fffaf3;
+      color: #222;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      background-color: #ffffff;
+      border-bottom: 2px solid #e5c77f;
+    }
+    header img {
+      height: 90px;
+      border-radius: 100px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #c9a14a;
+      margin: 1rem 0 0.5rem;
+    }
+    .description {
+      max-width: 700px;
+      margin: 2rem auto;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: center;
+      color: #444;
+      padding: 0 1rem;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .product {
+      background: #fff;
+      border: 1px solid #e0c38c;
+      border-radius: 12px;
+      padding: 1rem;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .product h3 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: 1.1rem;
+    }
+    .product p {
+      margin: 0.2rem 0 0.6rem;
+      color: #777;
+    }
+    .product button {
+      background-color: #d4af37;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .cart {
+      max-width: 500px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+    textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #ffffff;
+      border-top: 2px solid #e5c77f;
+      color: #333;
+      font-size: 1rem;
+    }
+    footer a {
+      color: #c9a14a;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://raw.githubusercontent.com/elbertkent/img/main/homegallerylogo.png" alt="HomeGallery Logo">
+    <h1>Home Gallery</h1>
+  </header>  <div class="description">
+    FIRSTHAND SUPPLIER | HOME LIVING & KITCHENWARE<br>
+    Beautiful, functional, and adorable home collections. Ready stock & Pre-order from Medan, Indonesia. 💛
+  </div>  <section class="products">
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/elbertkent/img/main/lululand-pitcher.jpg" alt="Lululand Pitcher">
+      <h3>Lululand Pitcher</h3>
+      <p>Rp 75.000</p>
+      <button onclick="addToCart('Lululand Pitcher - Rp75.000')">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/elbertkent/img/main/kids-tumbler.jpg" alt="Cute Kids Tumbler">
+      <h3>Cute Kids Tumbler</h3>
+      <p>Rp 55.000</p>
+      <button onclick="addToCart('Cute Kids Tumbler - Rp55.000')">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/elbertkent/img/main/bear-bento.jpg" alt="Bear Bento Set">
+      <h3>Bear Bento Set</h3>
+      <p>Rp 95.000</p>
+      <button onclick="addToCart('Bear Bento Set - Rp95.000')">Add to Cart</button>
+    </div>
+  </section>  <section class="cart">
+    <h2>🛒 Your Cart</h2>
+    <textarea id="cartBox" placeholder="Your cart is empty..." readonly></textarea><br>
+    <a id="checkoutBtn" target="_blank">
+      <button style="margin-top: 1rem;">Checkout via QRIS (WhatsApp)</button>
+    </a>
+  </section>  <footer>
+    <p>Instagram: <a href="https://instagram.com/homegallery.id" target="_blank">@homegallery.id</a></p>
+    <p>WhatsApp: +62 878-6949-6679</p>
+  </footer>  <script>
+    const cartBox = document.getElementById('cartBox');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    let cartItems = [];
+
+    function addToCart(item) {
+      cartItems.push(item);
+      cartBox.value = cartItems.join('\n');
+      const message = encodeURIComponent(Halo! Saya ingin beli:\n${cartItems.join('\n')}\n\nAlamat lengkap dan metode pembayaran: (silakan isi));
+      checkoutBtn.href = https://wa.me/6287869496679?text=${message};
+    }
+  </script></body>
+</html>
